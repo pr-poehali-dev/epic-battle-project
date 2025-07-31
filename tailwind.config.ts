@@ -19,6 +19,14 @@ export default {
 		},
 		extend: {
 			colors: {
+				gaming: {
+					blue: '#4285F4',
+					green: '#34A853',
+					red: '#EA4335',
+					yellow: '#FBBC04',
+					dark: '#1A1F2C',
+					purple: '#9b87f5'
+				},
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
 				ring: 'hsl(var(--ring))',
@@ -84,11 +92,26 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'neon-pulse': {
+					'0%, 100%': { boxShadow: '0 0 5px currentColor, 0 0 10px currentColor, 0 0 15px currentColor' },
+					'50%': { boxShadow: '0 0 2px currentColor, 0 0 5px currentColor, 0 0 8px currentColor' }
+				},
+				'float': {
+					'0%, 100%': { transform: 'translateY(0px)' },
+					'50%': { transform: 'translateY(-10px)' }
+				},
+				'glow': {
+					'0%, 100%': { filter: 'drop-shadow(0 0 10px rgba(66, 133, 244, 0.5))' },
+					'50%': { filter: 'drop-shadow(0 0 20px rgba(66, 133, 244, 0.8))' }
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'neon-pulse': 'neon-pulse 2s ease-in-out infinite',
+				'float': 'float 3s ease-in-out infinite',
+				'glow': 'glow 2s ease-in-out infinite'
 			}
 		}
 	},
